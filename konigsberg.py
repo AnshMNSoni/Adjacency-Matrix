@@ -5,7 +5,7 @@ from tabulate import tabulate
 Graph = namedtuple('Graph', ['vertices', 'edges'])
 
 # Konigsberg:
-vertices = [node for node in input("Enter the vertices of the Graph: ").capitalize().split()]
+vertices = [node for node in input("Enter the vertices of the Graph: ").upper().split()]
 
 try:
     cnt = 0
