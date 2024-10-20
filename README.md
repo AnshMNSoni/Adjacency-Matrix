@@ -1,6 +1,6 @@
 # Adjacency matrix - Graph Representation
 
-This repository contains a Python implementation of the famous **adjacency matrix** using the `Graph Theory` (Discrete Mathematics). The implementation includes generating an **adjacency matrix** for any given graph, which is represented by a set of vertices and edges.
+This repository contains a Python implementation of the famous **adjacency matrix** and **Graph Ploting** using the `Graph Theory` (Discrete Mathematics). The implementation includes generating an **adjacency matrix** for any given graph, which is represented by a set of vertices and edges.
 
 ## Table of Contents
 - [Introduction](#introduction)
