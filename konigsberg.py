@@ -3,7 +3,7 @@ from tabulate import tabulate
 import networkx as nx
 import matplotlib.pyplot as plt
 
-def undirected(Graph, vertices):
+def undiMatrix(Graph, vertices):
     try:
         cnt = 0
         edges = []
@@ -41,7 +41,7 @@ def undirected(Graph, vertices):
         print("\nSorry! Invalid Input.\n") 
 
 
-def directed(Graph, vertices):
+def diMatrix(Graph, vertices):
     try:
         edges = []
         
@@ -77,7 +77,7 @@ def directed(Graph, vertices):
         print("\nSorry! Invalid Input.\n") 
 
 
-def undiGraph():
+def undiGraph(vertivces):
     cnt = 0
     edges = []
     
@@ -116,16 +116,42 @@ def diGraph(vertices):
     
     
 # G(V, E)
-Graph = namedtuple('Graph', ['vertices', 'edges'])
+print("Press-0 for undirected Graphs\nPress-1 for direced Graphs") 
 
-# Konigsberg:
-vertices = [node for node in input("Enter the vertices of the Graph: ").upper().split()]
+input1 = int(input("Enter your choice: "))
 
-# Undirected graph:
-# undirected(Graph, vertices)
+if(input1 == 0):
+    print("Press-0 for Graphs Visualization\nPress-1 for Adjacency Matrix")
     
-# Directed Graph:
-# directed(Graph, vertices)
+    input2 = int(input("Enter your choice: "))
+    
+    Graph = namedtuple('Graph', ['vertices', 'edges'])
 
-# diGraph(vertices)
-# undiGraph(vertices)
+    # Konigsberg:
+    vertices = [node for node in input("Enter the vertices of the Graph: ").upper().split()]
+    
+    if(input2 == 0):
+        # UnDirected Graph:
+        undiGraph(vertices)
+    
+    else:
+        # Adjacency Matrix:
+        undiMatrix(Graph, vertices)
+    
+else:
+    print("Press-0 for Graphs Visualization\nPress-1 for Adjacency Matrix")
+    
+    input2 = int(input("Enter your choice: "))
+    
+    Graph = namedtuple('Graph', ['vertices', 'edges'])
+
+    # Konigsberg:
+    vertices = [node for node in input("Enter the vertices of the Graph: ").upper().split()]
+    
+    if(input2 == 0):
+        # Directed Graph:
+        diGraph(vertices)
+    
+    else:
+        # Adjacency Matrix:
+        diMatrix(Graph, vertices)
